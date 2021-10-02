@@ -1,5 +1,7 @@
 const { app, globalShortcut } = require('electron')
-var robot = require("robotjs");
+const robot = require("robotjs");
+
+robot.setMouseDelay(20);
 
 app.whenReady().then(() => {
   globalShortcut.register('R', () => {
@@ -7,13 +9,13 @@ app.whenReady().then(() => {
 
     robot.typeString('r');
 
-    //Open inventary
+    // Open inventary
     robot.typeString('b');
 
     switchGears();
 
+    // Close inventary
     robot.typeString('b');
-
   })
 })
 
@@ -21,7 +23,7 @@ const switchGears = () => {
     getPos();
 
     // Gloves
-    switchGear({x: 630, y: 880}, {x: 633, y: 815});
+    switchGear({x: 634, y: 637}, {x: 621, y: 727});
 }
 
 const getPos = () => {
