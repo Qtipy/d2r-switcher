@@ -5,7 +5,7 @@ robot.setMouseDelay(20);
 
 app.whenReady().then(() => {
   globalShortcut.register('R', () => {
-    console.log('Electron loves global shortcuts!');
+    console.log('r pressed');
 
     robot.typeString('r');
 
