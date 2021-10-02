@@ -7,7 +7,6 @@
     "electron": "^15.1.0",
     "robotjs": "^0.6.0"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "electron .",
     "rebuild": "npm rebuild --runtime=electron --target=15.1.0 --disturl=https://atom.io/download/atom-shell --abi=98",
