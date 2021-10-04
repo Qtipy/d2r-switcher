@@ -4,18 +4,17 @@ var robot = require("robotjs");
 robot.setMouseDelay(125);
 
 app.whenReady().then(() => {
-  globalShortcut.register('R', () => {
-    console.log('r pressed');
-
-    // robot.typeString('r');
+  globalShortcut.register('space', () => {
+    // Switch weapons
+    robot.keyTap('r');
 
     // Open inventary
-    robot.typeString('b');
+    robot.keyTap('b');
 
     switchGears();
 
     // Close inventary
-    robot.typeString('b');
+    robot.keyTap('b');
   })
 })
 
