@@ -1,13 +1,13 @@
 const { app, globalShortcut } = require('electron')
-const robot = require("robotjs");
+var robot = require("robotjs");
 
-robot.setMouseDelay(20);
+robot.setMouseDelay(125);
 
 app.whenReady().then(() => {
   globalShortcut.register('R', () => {
     console.log('r pressed');
 
-    robot.typeString('r');
+    // robot.typeString('r');
 
     // Open inventary
     robot.typeString('b');
@@ -22,8 +22,10 @@ app.whenReady().then(() => {
 const switchGears = () => {
     getPos();
 
-    // Gloves
-    switchGear({x: 634, y: 637}, {x: 621, y: 727});
+    // Amu
+    switchGear({ x: 2052, y: 963 }, { x: 2137, y: 408 });
+    // Boots
+    switchGear({ x: 1766, y: 807 }, { x: 2264, y: 650 });
 }
 
 const getPos = () => {
@@ -33,9 +35,9 @@ const getPos = () => {
 
 const switchGear = (posOrigin, posDestination) => {
     robot.moveMouse(posOrigin.x, posOrigin.y);
-    robot.mouseToggle("down");
-    robot.dragMouse(posDestination.x, posDestination.y);
-    robot.mouseToggle("up");
+    robot.mouseClick();
+    robot.moveMouse(posDestination.x, posDestination.y);
+    robot.mouseClick();
     robot.moveMouse(posOrigin.x, posOrigin.y);
     robot.mouseClick();
 }
