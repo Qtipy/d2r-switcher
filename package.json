@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "d2r-switcher",
   "main": "index.js",
-  "type": "module",
   "dependencies": {
     "electron": "^15.1.0",
     "robotjs": "github:octalmage/robotjs"
